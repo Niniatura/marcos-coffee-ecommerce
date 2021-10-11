@@ -1,0 +1,15 @@
+.brand-logo {
+    height: 50%;
+    pointer-events: none;
+  }
+
+  .coffeeing {
+    text-align: left;  
+  }
+
+  .categorias{
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    justify-content: space-between;
+  }
