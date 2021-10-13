@@ -1,4 +1,5 @@
 import logo from '../images/brand_logo.jpeg';
+import { CartWidget } from './CartWidget.js';
 import './navBar.css';
 export const NavBar = () => {
     return(
@@ -23,6 +24,7 @@ export const NavBar = () => {
                                 <a className="nav-link" href="#">Como comprar</a>
                             </li>   
                         </ul>
+                    <CartWidget />
                     </div>
             </div>
         </nav>
