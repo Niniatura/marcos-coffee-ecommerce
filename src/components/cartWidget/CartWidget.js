@@ -1,6 +1,7 @@
 import cart from '../images/shopping_cart_solid.svg';
+import './CartWidget.css';
 
-export const CartWidget = () => {
+export const Cart = () => {
     return(
         <div className="cart">
             <img src={cart} alt="shopping_cart" className = 'shopping_cart'/>
