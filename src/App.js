@@ -1,5 +1,5 @@
 import './App.css';
-import { ItemList} from './components/itemListContainer/ItemListContainer.js';
+import { ItemList} from './components/itemList/ItemList.js';
 import { NavBar } from './components/navBar/NavBar.js';
 //import {ItemCount,onAdd} from './components/itemCount/ItemCount';
 
