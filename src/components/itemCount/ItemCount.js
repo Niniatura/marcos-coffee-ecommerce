@@ -3,7 +3,7 @@ import './ItemCount.css';
 //import {ItemList,onAdd} from '../itemListContainer/ItemListContainer.js';
 
 
-export const ItemCount = ({ initial, stock }) => {
+export const ItemCount = ({ stock, initial }) => {
     
     
     const [counter,setCounter] = useState(0);
@@ -27,7 +27,7 @@ export const ItemCount = ({ initial, stock }) => {
     return (
         <div className="contador">
             <button className="btn bg-dark boton" onClick ={onDecrese}>-</button>
-            <p className="items">{initial}</p>
+            <p className="items">{counter}</p>
             <button className="btn bg-dark boton" onClick ={onIncrement}>+</button>        
             <button onClick ={onAdd}>Agregar al carrito</button>
         </div>
