@@ -1,7 +1,8 @@
 .contador{
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
-    width: 10%;
+    width: 17%;
+    border: rgb(105, 102, 102);
     
     
 }
@@ -12,4 +13,14 @@
 
 .boton{
     color: rgba(255,255,255,.55);
+    height: 2%;
+}
+
+.addButton{
+    width: 50%;
+    border-radius: 0.25rem;
+    
+}
+.add{
+    font-size: 70%;
 }

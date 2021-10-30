@@ -6,7 +6,7 @@ import './ItemCount.css';
 export const ItemCount = ({ stock, initial }) => {
     
     
-    const [counter,setCounter] = useState(0);
+    const [counter,setCounter] = useState(1);
 
     const onDecrese = () => {
         if (counter > 1) { 
@@ -29,7 +29,7 @@ export const ItemCount = ({ stock, initial }) => {
             <button className="btn bg-dark boton" onClick ={onDecrese}>-</button>
             <p className="items">{counter}</p>
             <button className="btn bg-dark boton" onClick ={onIncrement}>+</button>        
-            <button onClick ={onAdd}>Agregar al carrito</button>
+            <button className="addButton" onClick ={onAdd}><span className="add">Agregar al carrito</span></button>
         </div>
     )
 }
