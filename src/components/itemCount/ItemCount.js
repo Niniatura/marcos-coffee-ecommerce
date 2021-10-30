@@ -1,13 +1,8 @@
-import React, { useState } from "react";
 import './ItemCount.css';
-//import {ItemList,onAdd} from '../itemListContainer/ItemListContainer.js';
 
 
-export const ItemCount = ({ stock, initial }) => {
+export const ItemCount = ({ setCounter, counter, stock}) => {
     
-    
-    const [counter,setCounter] = useState(1);
-
     const onDecrese = () => {
         if (counter > 1) { 
           setCounter(counter - 1)
@@ -25,14 +20,14 @@ export const ItemCount = ({ stock, initial }) => {
     }
 
     return (
-      <div>
+        <>
         <div className="contador">
             <button className="btn btn-outline-dark" onClick ={onDecrese}>-</button>
             <p className="items">{counter}</p>
             <button className="btn btn-outline-dark" onClick ={onIncrement}>+</button>        
         </div>
             <button className="addButton btn bg-dark btn-primary" onClick ={onAdd}><span className="add">Agregar al carrito</span></button>
-        </div>
+       </>
     )
 }
 export default ItemCount;

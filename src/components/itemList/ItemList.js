@@ -1,10 +1,13 @@
 import {Item} from "../Item/item.js";
 
+
 export const ItemList= () =>{
    
     return(
-        
-            <Item />
+            <>
+                <Item />
+                
+            </>
         )
 }
 
