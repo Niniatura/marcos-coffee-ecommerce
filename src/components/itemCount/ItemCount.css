@@ -1,8 +1,7 @@
 .contador{
     display: flex;
     justify-content: space-between;
-    width: 17%;
-    border: rgb(105, 102, 102);
+    margin: 2%;
     
     
 }
@@ -17,8 +16,8 @@
 }
 
 .addButton{
-    width: 50%;
     border-radius: 0.25rem;
+    width: 100%;
     
 }
 .add{

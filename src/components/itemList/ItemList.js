@@ -1,10 +1,10 @@
-import {ItemCount} from "../itemCount/ItemCount.js";
+import {Item} from "../Item/item.js";
 
 export const ItemList= () =>{
    
     return(
         
-            <ItemCount stock='5' initial='1' />
+            <Item />
         )
 }
 

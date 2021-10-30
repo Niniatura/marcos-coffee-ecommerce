@@ -25,11 +25,13 @@ export const ItemCount = ({ stock, initial }) => {
     }
 
     return (
+      <div>
         <div className="contador">
-            <button className="btn bg-dark boton" onClick ={onDecrese}>-</button>
+            <button className="btn btn-outline-dark" onClick ={onDecrese}>-</button>
             <p className="items">{counter}</p>
-            <button className="btn bg-dark boton" onClick ={onIncrement}>+</button>        
-            <button className="addButton" onClick ={onAdd}><span className="add">Agregar al carrito</span></button>
+            <button className="btn btn-outline-dark" onClick ={onIncrement}>+</button>        
+        </div>
+            <button className="addButton btn bg-dark btn-primary" onClick ={onAdd}><span className="add">Agregar al carrito</span></button>
         </div>
     )
 }
