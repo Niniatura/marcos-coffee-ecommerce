@@ -1,19 +1,17 @@
 import {useState} from 'react';
-import logo from '../images/brand_logo.jpeg';
 import "../Item/item.css";
 import ItemCount from "../itemCount/ItemCount.js";
-import "../itemCount/ItemCount.css"
 
-export const Item =() =>{
+export const Item =(props) =>{
     const [counter,setCounter] = useState(1);
     return(
         <>
         <div className="card">
-            <img src={logo} className="brand-logo" alt="logo" />
+            <img src={props.picture} className="brand-logo" alt="logo" />
             <div className="card-body">
-                <h5>Card title</h5>
-                <p className="card-text">Decaffeinated single origin ut trifecta iced.</p>
-                <ItemCount setCounter={setCounter} counter={counter} stock="5"/>
+                <h5>{props.title}</h5>
+                <p className="card-text">{props.description}</p>
+                <ItemCount setCounter={setCounter} counter={counter} stock={props.stock}/>
             </div>
         </div>
         </>
