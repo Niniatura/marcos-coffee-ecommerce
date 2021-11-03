@@ -1,7 +1,7 @@
 import { useState,useEffect } from "react";
 import ItemList from "../itemList/ItemList.js";
 import data from "../productJson/ProductJSON.js";
-import "./ItemListContainer.css";
+import "./ItemListContainer.css";   
 
 export function ItemListContainer(){
     const [products,setProducts]=useState(null);
@@ -9,13 +9,13 @@ export function ItemListContainer(){
    useEffect(()=>{
     const productList = new Promise((resolve,reject) => {
         setTimeout(() =>{
-            resolve(console.log(data));
+            resolve((data));
         }, 2000);
         });
     
     productList.then(
         (result) => {
-            console.log(data);
+            
             setProducts(data);
             
         },
@@ -27,7 +27,7 @@ export function ItemListContainer(){
     return(
         <div className="Items">
         <ItemList />
-     </div>
+     </div  >
     )
 }
     

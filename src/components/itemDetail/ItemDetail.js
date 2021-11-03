@@ -1,7 +1,8 @@
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
+import { useParams} from "react-router-dom";
+import data from "../productJson/ProductJSON.js";
 
 export const ItemDetail =(props) =>{
-    const [counter,setCounter] = useState();
     return(
         <>
         <div className="card">

@@ -5,7 +5,7 @@ import V60Wood from "../../components/images/V60OliveWood.jpeg";
 
 export const data = [
     {
-        id:1,
+        id:'1',
         title: "V60 Craft Coffee Maker",
         description: "Decaffeinated single origin ut trifecta iced.",
         price: "150 USD",
@@ -14,7 +14,7 @@ export const data = [
     },
 
     {
-        id:2,
+        id:'2',
         title: "V60 Olive Wood Stand Set",
         description: "Ristretto extra , doppio, trifecta cortado flavour coffee ristretto.",
         price: "195 USD",
@@ -23,7 +23,7 @@ export const data = [
     },
 
     {
-        id:3,
+        id:'3',
         title: "V60 Dripper & Thermocolor Server Set",
         description: "Est irish, grounds, cappuccino white con panna instant caffeine.",
         price: "250 USD",
@@ -32,7 +32,7 @@ export const data = [
     },
 
     {
-        id:4,
+        id:'4',
         title: "Mini Coffee Dripper",
         description: "White galão percolator, grinder chicory, decaffeinated medium body extraction.",
         price: "180 USD",
