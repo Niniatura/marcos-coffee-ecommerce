@@ -5,22 +5,21 @@ import data from "../productJson/ProductJSON.js";
 
 
 export function ItemDetailContainer() {
-   
-    const [product, setProduct] = useState(null);
-  
-    const { id } = useParams();
-  
+    const [product,setProduct]=useState([]);
+    const {id} = useParams();
+    const [counter, setCounter] = useState();
+
     useEffect(() => {
-      new Promise((resolve, reject) => {
-        setTimeout(
-          () => resolve(data.filter((item) => item.id === id)),
-          0
-        );
-      }).then((data) => setProduct(data[0]));
-    }, [id]);
-  
-    console.log("product", product);
-  
-    return( <ItemDetail {...product} />)
-  }
+        new Promise((resolve, reject) => {
+          setTimeout(
+            () => resolve(data.filter((item) => item.id === id)),
+            0
+          );
+        }).then((data) => setProduct(data[0]));
+      }, []);
+    
+      return <ItemDetail {...product} />;
+    }
+    
+
 export default ItemDetailContainer;

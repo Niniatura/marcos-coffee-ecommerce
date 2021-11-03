@@ -1,9 +1,9 @@
-import {useState, React} from 'react';
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import {React} from 'react';
+import { Link } from "react-router-dom";
 import "../Item/item.css";
 
 export function Item (props){
-    const [counter,setCounter] = useState(0);
+    
     return(
         <>
         <div className="card">

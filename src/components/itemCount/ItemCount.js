@@ -2,6 +2,7 @@ import './ItemCount.css';
 
 
 export const ItemCount = ({ setCounter, counter, stock}) => {
+  
     
     const onDecrese = () => {
         if (counter > 1) { 

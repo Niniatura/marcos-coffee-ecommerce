@@ -1,7 +1,7 @@
 import {Item} from "../Item/item.js";
 import data from "../productJson/ProductJSON.js";
 
-export function ItemList ({products}) {
+export function ItemList () {
    return(
        <>
         {data.map((item) => (
