@@ -1,0 +1,11 @@
+.cardDetail{
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.counter{
+    display: flex;
+    justify-content: space-between;
+    margin: 2%;
+}
