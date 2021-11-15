@@ -1,10 +1,11 @@
 .contador{
     display: flex;
     justify-content: space-between;
-    margin: 2%;
+    width: 40%;
     
     
 }
+
 
 .items{
     margin: 3%;
@@ -17,7 +18,7 @@
 
 .addButton{
     border-radius: 0.25rem;
-    width: 100%;
+    width: 40%;
     
 }
 .add{

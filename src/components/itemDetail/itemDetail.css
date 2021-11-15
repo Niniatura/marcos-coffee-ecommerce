@@ -1,20 +1,28 @@
-.cardDetail{
+.detail{
+    
+    display: flex;
+}
+.cardTitle{
     display: flex;
     justify-content: center;
- 
 }
 
-.counter{
+.brand-logo{
+    width: 20%;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
+    margin-left: 20%;
+}
+.counter{
+    
     margin: 2%;
     height: 2%;
+    width: 40%;
 }
-
-
-
-.contador{
+.card-text{
     display: flex;
-    justify-content: flex-start;
-    width: 20%;
+    justify-content: center;
+    width: 45%;
 }
+
+

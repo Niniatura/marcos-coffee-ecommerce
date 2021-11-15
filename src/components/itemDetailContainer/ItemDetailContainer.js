@@ -19,7 +19,7 @@ export function ItemDetailContainer() {
         }).then((data) => setProduct(data[0]));
       }, [id]);
     
-      return <ItemDetail className="itemDetailContainer" {...product} />;
+      return <ItemDetail {...product} />;
     }
     
 

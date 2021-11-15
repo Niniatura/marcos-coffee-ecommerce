@@ -7,7 +7,7 @@ export const data = [
     {
         id:'1',
         title: "V60 Craft Coffee Maker",
-        description: "Decaffeinated single origin ut trifecta iced.",
+        description: "Ristretto extra , doppio, trifecta cortado flavour coffee ristretto.Decaffeinated single origin ut trifecta iced.Ristretto extra , doppio, trifecta cortado flavour coffee ristretto.",
         price: "150 USD",
         stock:34,
         picture: V60Craft
@@ -16,7 +16,7 @@ export const data = [
     {
         id:'2',
         title: "V60 Olive Wood Stand Set",
-        description: "Ristretto extra , doppio, trifecta cortado flavour coffee ristretto.",
+        description: "Ristretto extra , doppio, trifecta cortado flavour coffee ristretto.Ristretto extra , doppio, trifecta cortado flavour coffee ristretto.Ristretto extra , doppio, trifecta cortado flavour coffee ristretto.",
         price: "195 USD",
         stock:15,
         picture: V60Wood
@@ -25,7 +25,7 @@ export const data = [
     {
         id:'3',
         title: "V60 Dripper & Thermocolor Server Set",
-        description: "Est irish, grounds, cappuccino white con panna instant caffeine.",
+        description: "Ristretto extra , doppio, trifecta cortado flavour coffee ristretto.Est irish, grounds, cappuccino white con panna instant caffeine.Ristretto extra , doppio, trifecta cortado flavour coffee ristretto.",
         price: "250 USD",
         stock:12,
         picture: V60Dripper
@@ -34,7 +34,7 @@ export const data = [
     {
         id:'4',
         title: "Mini Coffee Dripper",
-        description: "White galão percolator, grinder chicory, decaffeinated medium body extraction.",
+        description: "Ristretto extra , doppio, trifecta cortado flavour coffee ristretto.White galão percolator, grinder chicory, decaffeinated medium body extraction.Ristretto extra , doppio, trifecta cortado flavour coffee ristretto.",
         price: "180 USD",
         stock:28,
         picture: Dripper
