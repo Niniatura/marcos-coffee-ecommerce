@@ -29,7 +29,7 @@ export const ItemCount = ({ setCounter, counter, stock, setVisible, onAdd}) => {
                     
           </div>
           <div>
-              <button className="addButton btn bg-dark btn-primary"><span className="add" onClick={onAdd} >Agregar al carrito</span></button>
+              <button className="addButton btn bg-dark btn-primary" onClick={onAdd}><span className="add" >Agregar al carrito</span></button>
           </div>
         </div>
        </>
