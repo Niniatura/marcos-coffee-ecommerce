@@ -5,13 +5,13 @@ import { ItemListContainer} from "./components/itemListContainer/ItemListContain
 import { NavBar } from './components/navBar/NavBar.js';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import ItemCart from './components/itemCart/ItemCart.js';
-import { CartContext } from './components/contexts/cartContext/cartContext';
+import { CartProvider } from './components/contexts/cartContext/cartContext';
 
 
 function App() {
   
   return (
-    <CartContext.Provider>
+    <CartProvider>
     <BrowserRouter>
     
     <div className="App">
@@ -36,7 +36,7 @@ function App() {
      
   
     </BrowserRouter>
-    </CartContext.Provider>
+    </CartProvider>
     );
 }
 

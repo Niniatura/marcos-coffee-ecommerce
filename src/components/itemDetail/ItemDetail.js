@@ -2,39 +2,42 @@ import { useState, useContext} from "react";
 import {ItemCount} from "../itemCount/ItemCount.js";
 import "./itemDetail.css";
 import '../itemCount/ItemCount.css';
+import { CartContext, CartProvider, useCart } from "../contexts/cartContext/cartContext.js";
+import data from "../productJson/ProductJSON";
 import { Link } from "react-router-dom";
-import {CartProvider, CartContext} from "../contexts/cartContext/cartContext.js";
 
-export function ItemDetail(props) {
-  const addItem = useContext(CartContext);
+export const ItemDetail = (product) =>{
+ 
+  const cart = useCart();
+  
   const [counter, setCounter] = useState(1);
-  const [visible, setVisible] = useState(true);
   
-  
-  const onAdd=(counter)=>{
-    console.log('se agrego un producto'+counter)
-    setVisible(false);
-    
-  }
 
-  
-  
-   
+  const onAddHandler=(item, counter) =>{
+    
+    
+    console.log("se agrego un producto"+ item + "cantidad:" + counter)
+    
+    cart.addItem(item,counter)
+  }
   return (
     <>
-      <CartContext.Provider value ={{addItem}}>
-        <h5 className="cardTitle">{props.title}</h5>
+      <CartProvider>
+        <h5 className="cardTitle">{product.title}</h5>
       <div className="detail">
-        <img src={props.picture} className="brand-logo" alt="logo" />
+        <img src={product.picture} className="brand-logo" alt="logo" />
         <div className="card-body">
-          <p className="card-text">{props.description}</p>  
-          {visible ? <ItemCount className="counter" setCounter={setCounter} counter={counter} stock={props.stock} setVisible={setVisible} onAdd={onAdd} onClick={() => addItem()}/> : <Link to={`/itemCart`} className="addButton btn bg-dark btn-primary">Ir al carrito de compras!</Link>}
+          <p className="card-text">{product.description}</p>  
+        <ItemCount className="counter" setCounter={setCounter} counter={counter} stock={product.stock} onAddHandler={onAddHandler(product, counter)}/> 
+        <Link to={`/itemCart`} className="addButton btn bg-dark btn-primary">Ir al carrito de compras!</Link> 
+          
         </div>
     </div>
-    </CartContext.Provider>
+    </CartProvider>
     </>
   );
 };
 
 
 export default ItemDetail;
+
