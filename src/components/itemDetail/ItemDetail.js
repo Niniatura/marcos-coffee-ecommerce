@@ -11,15 +11,14 @@ export const ItemDetail = (product) =>{
   const cart = useCart();
   
   const [counter, setCounter] = useState(1);
-  
 
-  const onAddHandler=(item, counter) =>{
-    
-    
-    console.log("se agrego un producto"+ item + "cantidad:" + counter)
-    
-    cart.addItem(item,counter)
+  const onAdd=(product,counter)=>{
+  
+   cart.addItem(product,counter)
+    console.log(product, counter)
   }
+
+  
   return (
     <>
       <CartProvider>
@@ -28,7 +27,10 @@ export const ItemDetail = (product) =>{
         <img src={product.picture} className="brand-logo" alt="logo" />
         <div className="card-body">
           <p className="card-text">{product.description}</p>  
-        <ItemCount className="counter" setCounter={setCounter} counter={counter} stock={product.stock} onAddHandler={onAddHandler(product, counter)}/> 
+        <ItemCount className="counter" setCounter={setCounter} counter={counter} stock={product.stock}/> 
+        <div>
+              <button className="addButton btn bg-dark btn-primary" onClick={onAdd(product,counter)}><span className="add">Agregar al carrito</span></button>
+          </div>
         <Link to={`/itemCart`} className="addButton btn bg-dark btn-primary">Ir al carrito de compras!</Link> 
           
         </div>
@@ -40,4 +42,3 @@ export const ItemDetail = (product) =>{
 
 
 export default ItemDetail;
-

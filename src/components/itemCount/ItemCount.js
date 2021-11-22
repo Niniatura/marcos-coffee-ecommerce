@@ -3,8 +3,8 @@ import { CartContext, CartProvider, useCart } from "../contexts/cartContext/cart
 import data from "../productJson/ProductJSON";
 import { Link } from "react-router-dom";
 
-export const ItemCount = ({ setCounter, counter, stock, onAdd}) => {
-  const cart = useCart();
+export const ItemCount = ({ setCounter, counter, stock}) => {
+  
   
     const onDecrese = () => {
         if (counter > 1) { 
@@ -18,9 +18,6 @@ export const ItemCount = ({ setCounter, counter, stock, onAdd}) => {
         }
       }
       
-     
-     
-    
     return (
         <>
         <div >
@@ -30,9 +27,7 @@ export const ItemCount = ({ setCounter, counter, stock, onAdd}) => {
               <button className="btn btn-outline-dark" onClick ={onIncrement}>+</button>
                     
           </div>
-          <div>
-              <button className="addButton btn bg-dark btn-primary" onAdd={onAdd}><span className="add">Agregar al carrito</span></button>
-          </div>
+          
          
         </div>
        </>

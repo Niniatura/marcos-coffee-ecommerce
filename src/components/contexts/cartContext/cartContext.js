@@ -5,22 +5,22 @@ export const CartContext = createContext();
 
 export const useCart = () => useContext(CartContext);
 const INITIAL_STATE = {
-    addedItems: [{ item: data,  counter: 1 }],
+    addedItems: [{ item: 'title',  quantity: 0  }],
     totalPrice: 0
   };
 
 export function CartProvider ({children}){
     const[cart,setCart] = useState(INITIAL_STATE);
-    const addItem = (item, counter) => {
-        if (cart.addedItems.some((item) => data.id=== item.id)) {
-            console.log('se agrego un producto culo'+item.id + 'cantidad'+ counter)
-            //console.log(item)
+    const addItem = (product, counter) => {
+        if (cart.addedItems.some((addedItem) => product.id=== product.id)) {
+            console.log('se agrego un producto culo'+product.title+ 'cantidad'+ counter)
+            console.log(INITIAL_STATE)
           return;
         }
-    
-        const newAddedItems = cart.addedItems.map((product) => {
-          if (product.data === data.id) return { ...product, quantity: 2 };
-            console.log({data})
+        
+        const newAddedItems = cart.addedItems.map((addedItems) => {
+          if (product.id === data.id) return { ...addedItems, quantity: counter };
+            //console.log({product})
           return product;
         });
         
