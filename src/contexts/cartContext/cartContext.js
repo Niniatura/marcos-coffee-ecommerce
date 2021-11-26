@@ -20,7 +20,7 @@ export const CartProvider = ({children})=>{
 					...product,
 					counter: counter,
 				};
-        console.log(newItem)
+        //console.log(newItem)
 
 				setCart([...cart, newItem]);
 			} else {

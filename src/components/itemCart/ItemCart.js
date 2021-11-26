@@ -1,16 +1,24 @@
 import { useContext} from "react";
 import { CartContext } from "../../contexts/cartContext/cartContext.js";
 
-function ItemCart ({product}) {
+function ItemCart () {
     
-        const object = useContext(CartContext);
+        const {cart} = useContext(CartContext);
     return(
         <>
        
-       <article key={object.id} className='cartDetail-card'>
-       <h2 className='info-title ms-3'>{object.title}</h2>
-       </article>
-       
+       {cart.length > 0 && (
+          <div className="cart">
+            
+            {cart?.map((addedItems) => (
+              <div className="itemBox">
+                
+                <div> {addedItems.title}</div>
+                <div> {addedItems.counter}</div>
+              </div>
+            ))}
+          </div>
+        )}
         </>
     )
     };
