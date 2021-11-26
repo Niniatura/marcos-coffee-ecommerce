@@ -1,5 +1,5 @@
 import './ItemCount.css';
-import { CartContext, CartProvider, useCart } from "../contexts/cartContext/cartContext.js";
+import { CartContext, CartProvider, useCart } from "../../contexts/cartContext/cartContext.js";
 import data from "../productJson/ProductJSON";
 import { Link } from "react-router-dom";
 

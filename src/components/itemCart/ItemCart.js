@@ -1,17 +1,15 @@
-import { useState, useContext} from "react";
-import {CartContext} from '../contexts/cartContext/cartContext.js';
+import { useContext} from "react";
+import { CartContext } from "../../contexts/cartContext/cartContext.js";
 
-export function ItemCart ({addedItems}) {
-    const item = useContext(CartContext);
-    console.log(addedItems)
-    console.log(item)
+function ItemCart ({product}) {
+    
+        const object = useContext(CartContext);
     return(
         <>
        
-            <div>
-                
-                <p>hola</p>
-            </div>
+       <article key={object.id} className='cartDetail-card'>
+       <h2 className='info-title ms-3'>{object.title}</h2>
+       </article>
        
         </>
     )

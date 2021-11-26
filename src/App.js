@@ -5,7 +5,7 @@ import { ItemListContainer} from "./components/itemListContainer/ItemListContain
 import { NavBar } from './components/navBar/NavBar.js';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import ItemCart from './components/itemCart/ItemCart.js';
-import { CartProvider } from './components/contexts/cartContext/cartContext';
+import { CartProvider } from './contexts/cartContext/cartContext';
 
 
 function App() {
