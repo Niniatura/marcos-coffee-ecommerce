@@ -4,51 +4,42 @@ import data from "../../components/productJson/ProductJSON";
 export const CartContext = createContext();
 
 export const useCart = () => useContext(CartContext);
+
 const INITIAL_STATE = {
-    addedItems: [{ name: 'title',  quantity: 0  }],
-    totalPrice: 0
-  };
-  
+  newItem: [{ id: 'id',  counter: 0  }],
+  totalPrice: 0
+}; 
 
 export const CartProvider = ({children})=>{
-    const[cart,setCart] = useState([]);
-    const addItem = (product, counter) => {
-		const isInCart = cart.some((addedItems) => product.id === data.id);
-		if (product.stock >= 0) {
-			if (!isInCart) {
-				const newItem = {
-					...product,
-					counter: counter,
-				};
-        //console.log(newItem)
+  const[cart,setCart] = useState([]);
+  const addItem = (product, counter) => {
+  const isInCart = cart.some((item) => item.id === product.id);
+  if (product.stock >= 0) {
+    if (!isInCart) {
+      const newItem = {
+        ...product,
+        counter: counter,
+      };
+      //console.log(newItem)
 
-				setCart([...cart, newItem]);
-			} else {
-        const foundedItem = cart.find(
-          (product) => product.id === data.id
-          );
-          foundedItem.counter = foundedItem.counter + counter;
-          foundedItem.stock = foundedItem.stock - counter;
-          setCart([...cart]);
-        }
-      }
-	};
-
-        
-        /* const newAddedItems = cart.addedItems.map((addedItems) => {
-          if (product.id === data.id) return { ...addedItems, quantity: counter };
-            //console.log({product})
-          return product;
-        });
-         */
+      setCart([...cart, newItem]);
       
-    const removeItem =(item) =>{
-        // remover item
+    } else {
+      const foundedItem = cart.find(
+        (item) => item.id === product.id
+      );
+      foundedItem.counter = foundedItem.counter + counter;
+      foundedItem.stock = foundedItem.stock - counter;
+      setCart([...cart]);
     }
-    return(
-        <CartContext.Provider
-        value ={{ cart, setCart, addItem}}>
-            {children}
-        </CartContext.Provider >
-    ); 
+};
+};
+      
+  return(
+      <CartContext.Provider
+      value ={{ cart, setCart, addItem}}>
+          {children}
+      </CartContext.Provider >
+  ); 
+
 };

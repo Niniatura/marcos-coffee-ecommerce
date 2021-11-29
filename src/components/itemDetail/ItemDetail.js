@@ -12,10 +12,12 @@ export const ItemDetail = (product) =>{
   //console.log(cartItems);
   
   const [counter, setCounter] = useState(1);
+  const [view, setView] = useState(true);
 
   const onAdd=(product,counter)=>{
   
    cartItems.addItem(product,counter)
+   setView(false)
     //console.log(product, counter)
   }
 
@@ -23,18 +25,20 @@ export const ItemDetail = (product) =>{
   return (
     <>
       <CartProvider>
+        <div key={product.id}>
         <h5 className="cardTitle">{product.title}</h5>
       <div className="detail">
         <img src={product.picture} className="brand-logo" alt="logo" />
         <div className="card-body">
           <p className="card-text">{product.description}</p>  
         <ItemCount className="counter" setCounter={setCounter} counter={counter} stock={product.stock}/> 
-        <div>
+        {view?<div>
               <button className="addButton btn bg-dark btn-primary" onClick={(e) => onAdd(product,counter)}><span className="add">Agregar al carrito</span></button>
-          </div>
-        <Link to={`/itemCart`} className="addButton btn bg-dark btn-primary">Ir al carrito de compras!</Link> 
+          </div>:
+        <Link to={`/itemCart`} className="addButton btn bg-dark btn-primary">Ir al carrito de compras!</Link> }
           
         </div>
+    </div>
     </div>
     </CartProvider>
     </>
